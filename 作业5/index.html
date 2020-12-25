@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .map {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #eff4f9;
+        }
+        
+        .map::after {
+            content: '';
+            position: absolute;
+            width: 25vw;
+            height: 5vh;
+            z-index: 4;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            background-image: url('./img/title.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map">
+
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/map.js"></script>
+</body>
+
+</html>

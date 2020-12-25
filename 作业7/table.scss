@@ -1,0 +1,350 @@
+@mixin ft1 {
+    font-size: 1.125rem;
+    color: #0c5c92;
+    font-weight: 700;
+}
+$nft: 0.875rem;
+$cbb:#0c5c92;
+$csb:#e6eff8;
+$csmb:#b4d8f2;
+$cmb:#6dafff;
+$ctb:rgba(1, 74, 158, 0.3);
+$borders:0.0625rem solid #e1e5e9;
+html{
+    font-size: 16px;
+}
+
+@media only screen  and (min-width: 1900px) {
+    html{
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1660px) {
+    html{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1493px) {
+    html{
+        font-size: 18px;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 960px;
+    width: 70vw;
+    max-width: 1344px;
+    margin: auto;
+    height: 137.5rem;
+   
+}
+.table1{
+    display: flex;
+    justify-content: flex-end;
+    
+    width: 97.8%;
+    text-align: center;
+}
+.table1 .inline:first-of-type{
+    width: 21%;
+    height: 10rem;
+    text-align: center;
+    img{
+        width: 100%;
+        height: 8rem;
+    
+    }
+    p{
+        @include ft1();
+
+    }
+}
+
+.table1 .inline:last-of-type{
+    width: 76.5%;
+    margin-left: 0.5%;
+    table{
+        font-size: $nft;
+        border-collapse: collapse;
+        width: 100%;
+        height: 9.75rem;
+        border: $borders;
+        tr td:nth-last-of-type(2n){
+            width: 12%;
+            background-color: $csb;
+            border: $borders;
+        }
+        tr td:nth-last-of-type(2n+1){
+            width: 13%;
+            border: $borders;
+        }
+
+    }
+
+}
+
+
+.table2{
+    width: 94.8%;
+    height: 15.125rem;
+    
+    .nav {
+        display: flex; 
+        overflow: hidden;      
+        .sign {
+            width: 14.3%;
+            height: 2rem;     
+            position: relative;
+            color: #fff;
+            text-align: center;          
+            background-color: $ctb;
+            border-radius : 1.1rem 1.1rem 0 0;
+            line-height: 2rem;
+        &:first-of-type{
+            width: 16.5%; 
+            background-color: $cbb; 
+            .b{
+                border-right:1rem solid $cbb;
+            }
+            .a{
+                border-left:1.2rem solid $cbb;
+            }
+        }
+        .a{
+            position: absolute;
+           
+            width: 0;
+            height: 0;
+            right: -1.2rem;
+          
+            bottom: 0;
+            
+            border-top:0.97rem solid transparent;
+            border-left:1.2rem solid $ctb;
+        }
+        .b{
+            position: absolute;
+           
+            width: 0;
+            height: 0;
+            left: -1rem;
+          
+            bottom: 0;        
+            border-top:0.97rem solid transparent;
+            border-right:1rem solid $ctb;
+        }
+        
+    }
+        
+    }
+    .content{
+        width: 100%;
+        height: 13.375rem;
+        border-top:$borders ;
+        border-bottom:$borders;
+        padding: .875rem 0 .625rem 0;
+       .sroll{
+        width: 100%;
+        height: 11.875rem;
+           overflow-y: scroll;
+           border: $borders;
+       }
+        table{
+            font-size: $nft;
+            border-collapse: collapse;
+            width: 100%;
+            height: 11.875rem;
+            text-align: center;
+           
+            tr td:nth-of-type(2n+1){
+                width: 19.2%;
+                background-color: $csb;
+                border: $borders;
+            }
+            tr td:nth-of-type(2n){
+                width: 11.1%;
+                color: $cmb;
+                border: $borders;
+            }
+            tr td[class]{
+                width: 27.5%;
+                height: 2.125rem;
+            }
+        }
+    }
+    
+
+
+
+
+
+}
+.table3{
+    width: 92.7%;
+    height: 13.5rem;
+    h4{
+        @include ft1()
+    }
+    table{
+        border-collapse: collapse;
+        width: 100%;
+        font-size: $nft;
+        height:11.375rem;
+        border: $borders;
+        text-align: center;
+        td{
+            border: $borders;
+          
+        }
+        .first{
+            width: 20.2%;
+            background-color: $csb;
+        }
+        .two{
+            width: 15%;
+        }
+        .xiao{
+            width: 16.1%;
+        }
+        tr td:nth-last-of-type(2n+1){ 
+            color: $cmb;
+        }
+        
+
+    }
+
+}
+.table4{
+    width: 94.4%;
+    height: 25rem;
+    .header{
+        display: flex;
+        width: 100%;
+        .kong{          
+            width: 18px;
+            height: 2.4375rem;
+            background-color: $csmb;
+            border: $borders;
+            border-left: 0;
+            margin-left: -2px;
+        }
+    }
+    .sroll{
+        width: 100%;
+        height: 22.5rem;
+           overflow-y: scroll;
+           border-bottom: $borders;
+          
+       }
+    table{
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+        font-size: $nft;
+        overflow:hidden;
+        text-align: center;
+        thead th{
+            background-color: $csmb;
+            border: $borders;
+           
+            height: 2.4375rem;
+            font-weight: 400;
+        }
+        tbody{                    
+            td{
+                height: 2.4375rem;
+                 border: $borders;
+            }
+            tr td:nth-of-type(n+3){
+                color: $cmb;
+            }
+        }
+        .d1{width: 16.8%;}
+        .d2{width: 16.8%;}
+        .d3{width: 11.46%;}
+        .d4{width: 8.98%;}
+        .d5{width:8.98%;}
+        .d6{width: 4.7%;}
+        .d7{width: 8.98%;}
+        .d8{width: 8.98%;}
+        .d9{width: 12.69%;}
+
+    }
+
+}
+.table5{
+    width: 98.75%;
+    height: 42.75rem; 
+    padding: 0 1.48%;
+    background-color: #f1f6fa;
+    h4{
+        @include ft1();
+        line-height: 2.8rem;
+    }
+    .pintu{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-content: flex-start;
+        flex-flow: row wrap;
+        div:nth-of-type(-n+3){
+            width: 32.6%;
+            height: 19.3125rem;
+            background-color: #fff;
+        }
+        div:nth-of-type(n+4){
+            width: 49.45%;
+            height:19.375rem;
+            margin-top: .625rem;
+            background-color: #fff;
+        }
+    }
+}
+.table6{
+    position: relative;
+    width: 100%;
+    height:20.125rem;
+   padding-top: 1.875rem;
+   .tu6{
+       width: 100%;
+       height: 100%;
+
+   }
+   .select{
+       position: absolute;
+       width: 15.7%;
+       height: 1.375rem;
+       right: 10%;
+       top: 2.5rem;
+       border: $borders;
+       line-height: 1.375rem;
+       font-size: 0.8rem;
+        padding-left: 0.5%;
+        span{
+            position: relative;
+            &::after{
+                position: absolute;
+                content: '';
+                right: -75%;
+                top: 0.3rem;
+                border: 0.15rem solid transparent;
+                border-top: 0.35rem solid #000;
+            }
+        }
+        
+   }
+}

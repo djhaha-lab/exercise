@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    min-width: 320px;
+    max-width: 472px;
+    height: 100vh;
+    margin: auto;
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 236% 117%;
+}
+
+.content {
+    width: 87.8%;
+    height: 77.1%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.header {
+    width: 100%;
+    height: 3.5%;
+    padding-top: 1.3%;
+    padding-right: 1.5%;
+    background-color: #f7f7f7;
+}
+
+.header img {
+    float: right;
+    height: 50%;
+}
+
+.header img::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content .form {
+    width: 92.6%;
+    margin: 1.8% auto 0;
+}
+
+.content .form input {
+    display: block;
+    width: 100%;
+    -webkit-appearance: button;
+    margin-bottom: 1.8%;
+    height: 5.2vh;
+    border: 1px solid #dadcde;
+}
+
+.content .form .big {
+    width: 100%;
+    height: 54.4vh;
+    border: 1px solid #dadcde;
+    resize: none;
+}
+
+.content .form .half {
+    width: 50%;
+    height: 2.7vh;
+}
